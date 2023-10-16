@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="180dp"
+    android:layout_margin="4dp"
+    android:orientation="horizontal"
+    android:gravity="center|top">
+
+    <ImageView
+        android:id="@+id/imgItemBiaTruyenTG"
+        android:layout_width="131dp"
+        android:layout_height="177dp"
+        android:layout_gravity="center"
+        android:background="#C5C5C5"
+        android:src="@drawable/default_book_cover"
+        android:layout_marginBottom="5dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txtItemTenTruyenTG"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Vương gia Marxism"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="5sp"/>
+        <TextView
+            android:id="@+id/txtItemTacGiaTG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HanKen"
+            android:textSize="25dp"
+            android:textColor="#FF0000"
+            android:layout_margin="5sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnSuaItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chỉnh sửa"
+                android:layout_margin="5sp"/>
+            <Button
+                android:id="@+id/btnXoaItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xóa"
+                android:layout_margin="5sp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

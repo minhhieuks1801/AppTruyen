@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DoiMatKhauActivity"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:gravity="center"
+    android:background="#E3C2C2">
+
+    <EditText
+        android:id="@+id/edtOldPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:hint="Old Password"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="20sp"/>
+
+    <EditText
+        android:id="@+id/edtChangePassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10sp"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        android:imeOptions="actionNext"
+        android:layout_marginTop="20sp"/>
+
+    <Button
+        android:id="@+id/btn_Change_Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="30sp"
+        android:backgroundTint="#B0EAAF"/>
+
+</LinearLayout>

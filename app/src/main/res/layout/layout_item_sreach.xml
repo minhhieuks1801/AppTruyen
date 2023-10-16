@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="6sp">
+
+    <ImageView
+        android:id="@+id/imageViewSreach"
+        android:layout_width="131dp"
+        android:layout_height="177dp"
+        android:src="@drawable/default_book_cover" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtItemTenTruyenSreach"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Vương gia Marxism"
+            android:textSize="28dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_margin="5sp"/>
+        <TextView
+            android:id="@+id/txtItemTacGiaSreach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HanKen"
+            android:textSize="25dp"
+            android:textColor="#FF0000"
+            android:layout_margin="5sp"/>
+        <TextView
+            android:id="@+id/txtSoChuong"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:text="Số chương: 123"
+            android:textSize="25dp"
+            android:textColor="#CC5B5B"
+            android:textStyle="bold"
+            android:layout_margin="5sp"/>
+    </LinearLayout>
+
+</LinearLayout>

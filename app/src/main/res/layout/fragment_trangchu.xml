@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.trangchu.TrangChuFragment"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:background="#F1EEEE"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mới cập nhật"
+                android:textColor="#090249"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvTruyenMoiNhat"
+                android:layout_width="match_parent"
+                android:layout_height="250sp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="300sp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h75"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.75" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/h50"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/v55"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.55" />
+
+                <ImageView
+                    android:id="@+id/imgBiaTruyenTrangChu"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="3sp"
+                    android:src="@drawable/default_book_cover"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="@id/v55"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/v55"
+                    app:layout_constraintTop_toTopOf="@id/h75">
+
+                    <Button
+                        android:id="@+id/btnDocTruyenTrangChu"
+                        android:layout_width="120sp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="10dp"
+                        android:backgroundTint="@color/black"
+                        android:text="Đọc"
+                        android:textSize="15sp"
+                        app:cornerRadius="30sp" />
+
+                    <Button
+                        android:id="@+id/btnTheoDoiTruyenTrangChu"
+                        android:layout_width="40sp"
+                        android:layout_height="50sp"
+                        android:layout_marginRight="30sp"
+                        android:backgroundTint="#A13232"
+                        android:text="+"
+                        android:textSize="20sp"
+                        app:cornerRadius="100dp" />
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="0sp"
+                android:layout_height="0sp"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/h75"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/v55"
+                app:layout_constraintTop_toTopOf="@id/h50">
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:text="Lượt đọc: "
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:layout_gravity="left|center" />
+
+                    <TextView
+                        android:id="@+id/txtLuotDocTruyenTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center"
+                        android:text="66771508"
+                        android:textColor="#DC4646"
+                        android:textSize="20sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0sp"
+                    android:layout_height="0sp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@id/h50"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/v55"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <TextView
+                        android:id="@+id/txtTenTruyenTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vương gia Marxist"
+                        android:textColor="@color/black"
+                        android:textSize="23sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtGioiThieuTruyenTrangChu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#454343"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đọc nhiều"
+                android:textColor="#090249"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvTruyenDocNhieu"
+                android:layout_width="match_parent"
+                android:layout_height="250sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Theo dõi nhiều"
+                android:textColor="#090249"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvTruyenTheoDoiNhieu"
+                android:layout_width="match_parent"
+                android:layout_height="250sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TacGiaActivity"
+    android:orientation="vertical"
+    android:layout_margin="5sp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10sp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Truyện của tôi"
+            android:textColor="#090249"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20sp"/>
+        <Button
+            android:id="@+id/btnThemTruyen"
+            android:layout_marginLeft="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm truyen"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#B327B0"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20sp"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTruyenSangTac"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/txtThongBaoST"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""/>
+
+
+
+</LinearLayout>

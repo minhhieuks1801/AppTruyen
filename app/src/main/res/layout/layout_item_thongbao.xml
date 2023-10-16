@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="5sp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgThongBao"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:contentDescription="@string/nav_header_desc"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+        android:src="@drawable/default_book_cover_2" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtnoiDungThongBao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:layout_gravity="top"
+            android:text="Truyện Lý Triều Bá Đạo Phò Mã đã thêm 1 chương mới" />
+
+        <TextView
+            android:id="@+id/txtThoiGianThongBao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12 giờ trước"
+            android:layout_gravity="bottom"/>
+    </LinearLayout>
+
+</LinearLayout>

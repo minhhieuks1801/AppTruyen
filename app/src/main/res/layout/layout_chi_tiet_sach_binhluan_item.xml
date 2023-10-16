@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10sp">
+
+
+    <TextView
+        android:id="@+id/txtTenNguoiBinhLuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nguyễn Minh Hiệu"
+        android:textStyle="bold"
+        android:textColor="#00A7E6"
+        android:textSize="20sp"
+        android:layout_marginTop="10sp"/>
+
+    <TextView
+        android:id="@+id/txtNoiDungBinhLuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5sp"
+        android:layout_weight="1"
+        android:text="Thế ông muốn cái gì?"
+        android:layout_marginTop="5sp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtThoiGianBinhLuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="12 ngày trước"
+        android:textStyle="bold"
+        android:textColor="#6E6C6C"
+        android:textSize="15sp"
+        android:layout_marginTop="5sp"/>
+
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ThemChuongActivity"
+    android:background="#4C4B4B">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/edtThemTenChuong"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Tên chương"
+                android:padding="10dp"
+                android:layout_margin="3dp"
+                android:background="#FFFFFF"/>
+
+            <EditText
+                android:id="@+id/edtThemNoiDUngChuong"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_margin="3dp"
+                android:padding="10dp"
+                android:ems="10"
+                android:inputType="text"
+                android:hint="Nội dung"
+                android:scrollbars="vertical"
+                android:gravity="top"
+                android:background="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/btnLuuThemChuong"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm chương"
+                android:backgroundTint="#D8741A"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

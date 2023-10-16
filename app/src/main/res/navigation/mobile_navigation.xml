@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_trangchu">
+
+    <fragment
+        android:id="@+id/nav_trangchu"
+        android:name="com.example.apptruyen.ui.trangchu.TrangChuFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_trangchu" />
+
+    <fragment
+        android:id="@+id/nav_tutruyen"
+        android:name="com.example.apptruyen.ui.tutruyen.TuTruyenFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_tutruyen" />
+
+    <fragment
+        android:id="@+id/nav_thongbao"
+        android:name="com.example.apptruyen.ui.thongbao.ThongBaoFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_thongbao" />
+
+    <fragment
+        android:id="@+id/nav_taikhoan"
+        android:name="com.example.apptruyen.ui.taikhoan.TaiKhoanFragment"
+        android:label="@string/menu_taikhoan"
+        tools:layout="@layout/fragment_taikhoan" />
+</navigation>
