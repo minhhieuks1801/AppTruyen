@@ -120,7 +120,6 @@ public class TrangChuFragment extends Fragment {
                getTruyenTrangChu(listTruyenMoi);
                trangChuAdapter1.notifyDataSetChanged();
            }
-
            @Override
            public void onCancelled(@NonNull DatabaseError error) {
 

@@ -10,7 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Thêm Chương"
-        android:textSize="25dp"
+        android:textSize="17dp"
+        android:textColor="@color/black"
+        android:backgroundTint="#DDC41B"
         android:layout_gravity="right"
         android:layout_marginRight="10dp"/>
 

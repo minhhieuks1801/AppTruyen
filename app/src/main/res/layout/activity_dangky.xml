@@ -53,10 +53,10 @@
         android:id="@+id/btn_sign_up"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Sign up"
+        android:text="Đăng Ký"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginTop="30sp"
-        android:background="#A0E39E"/>
+        android:backgroundTint="#A0E39E"/>
 
 </LinearLayout>

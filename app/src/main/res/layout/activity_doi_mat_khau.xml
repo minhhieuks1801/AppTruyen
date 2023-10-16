@@ -18,7 +18,7 @@
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:hint="Old Password"
+        android:hint="Mật khẩu cũ"
         android:inputType="textPassword"
         android:imeOptions="actionNext"
         android:layout_marginTop="20sp"/>
@@ -31,7 +31,7 @@
         android:padding="10sp"
         android:textColor="@color/black"
         android:textSize="25sp"
-        android:hint="New Password"
+        android:hint="Mật khẩu mới"
         android:inputType="textPassword"
         android:imeOptions="actionNext"
         android:layout_marginTop="20sp"/>
@@ -40,7 +40,7 @@
         android:id="@+id/btn_Change_Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Change Password"
+        android:text="Đổi mật khẩu"
         android:textSize="20sp"
         android:textColor="@color/black"
         android:layout_marginTop="30sp"

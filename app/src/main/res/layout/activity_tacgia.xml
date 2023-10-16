@@ -24,11 +24,11 @@
         <Button
             android:id="@+id/btnThemTruyen"
             android:layout_marginLeft="30sp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:text="Thêm truyen"
             android:textColor="#FFFFFF"
-            android:backgroundTint="#B327B0"
+            android:backgroundTint="#E88B66"
             android:textSize="15sp"
             android:textStyle="bold"
             android:layout_marginBottom="20sp"/>

@@ -37,7 +37,7 @@ public class DangNhapActivity extends AppCompatActivity {
 
     private void initUi(){
         txtSignUp = findViewById(R.id.txtSignUp);
-        edtEmail = findViewById(R.id.txtUpdateEmail);
+        edtEmail = findViewById(R.id.txtDangNhapEmail);
         edtPassword = findViewById(R.id.edtPass);
         btnSignIn = findViewById(R.id.btn_sign_in);
         txtForgotPass = findViewById(R.id.txtForgotPass);
