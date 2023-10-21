@@ -65,10 +65,10 @@ public class BinhLuan_Adapter extends ArrayAdapter<BinhLuan> {
                 a = khoangCach/3600 + " giờ " + (khoangCach%3600)/60 + " phút trước";
             }
             else if (khoangCach >= 86400 && khoangCach < 2592000) {
-                a =khoangCach/86400 + "ngày trước";
+                a =khoangCach/86400 + " ngày trước";
             }
             else if (khoangCach >= 2592000 && (khoangCach/2592000) < 12) {
-                a =khoangCach/2592000 + "tháng trước";
+                a =khoangCach/2592000 + " tháng trước";
             }
             else if((khoangCach/2592000) >= 12){
                 a = ((khoangCach/2592000)/12) + "năm trước";
