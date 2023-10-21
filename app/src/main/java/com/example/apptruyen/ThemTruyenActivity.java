@@ -129,7 +129,7 @@ public class ThemTruyenActivity extends AppCompatActivity {
                         "Đang viết",
                         dateString,
                         edtTenTruyen.getText().toString()+ ".png",
-                        theLoai, 0, 0, 0);
+                        theLoai.substring(1), 0, 0, 0);
                 addTruyen.setValue(truyen, new DatabaseReference.CompletionListener() {
                     @Override
                     public void onComplete(@Nullable DatabaseError error, @NonNull DatabaseReference ref) {
