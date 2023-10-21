@@ -119,7 +119,6 @@ public class ChiTietTruyenActivity extends AppCompatActivity {
         storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
             public void onSuccess(Uri uri) {
-                // Sử dụng Glide để tải và hiển thị hình ảnh từ Uri
                 Glide.with(ChiTietTruyenActivity.this)
                         .load(uri)
                         .into(imgTruyen);
@@ -249,7 +248,6 @@ public class ChiTietTruyenActivity extends AppCompatActivity {
                     }
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

@@ -7,6 +7,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.example.apptruyen.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -33,7 +36,14 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FileDownloadTask;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -61,7 +71,7 @@ public class SuaThongTinTaiKhoanActivity extends AppCompatActivity {
         dialog = new ProgressDialog(SuaThongTinTaiKhoanActivity.this);
         edtTen = findViewById(R.id.edtUpdateTen);
         txtEmail = findViewById(R.id.txtUpdateEmail);
-        imgAvatar = findViewById(R.id.img_avatar);
+        imgAvatar = findViewById(R.id.img_avatarUpdate);
         btnUpdate = findViewById(R.id.btn_UpdateProfile);
     }
 
@@ -187,6 +197,54 @@ public class SuaThongTinTaiKhoanActivity extends AppCompatActivity {
 
             }
         });
+
+        String storagePath = user.getUid()+".PNG";
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(storagePath);
+        try {
+            File localFile = File.createTempFile("edited_image", "png");
+            storageRef.getFile(localFile).addOnSuccessListener(new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(FileDownloadTask.TaskSnapshot taskSnapshot) {
+                    Bitmap editedBitmap = ((BitmapDrawable) imgAvatar.getDrawable()).getBitmap();
+
+
+                    FileOutputStream fos = null;
+                    try {
+                        fos = new FileOutputStream(localFile);
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                    editedBitmap.compress(Bitmap.CompressFormat.PNG, 100, fos);
+                    try {
+                        fos.close();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+
+                    StorageReference editedImageRef = FirebaseStorage.getInstance().getReference().child(storagePath);
+                    Uri editedImageUri = Uri.fromFile(localFile);
+
+                    UploadTask uploadTask = editedImageRef.putFile(editedImageUri);
+
+                    uploadTask.addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                        @Override
+                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                        }
+                    });
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
     }

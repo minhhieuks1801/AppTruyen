@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.apptruyen.databinding.ActivityMainBinding;
 import com.example.apptruyen.model.User;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -30,6 +32,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -127,16 +131,36 @@ public class MainActivity extends AppCompatActivity {
             tvTenTaiKhoan.setVisibility(View.VISIBLE); //Hiện
             tvTenTaiKhoan.setText(name+"");
         }
-
         tvEmail.setText(email);
-        Glide.with(this).load(photoUrl).error(R.drawable.ic_avatar).into(imgAvatar);
+
+        String urik = "avt.png";
+        if(photoUrl.equals("")){
+            urik = "avt.png";
+        }
+        else {
+            urik = user.getUid()+".PNG";
+        }
+        StorageReference storageRef = FirebaseStorage.getInstance().getReference().child(urik);
+        storageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+            @Override
+            public void onSuccess(Uri uri) {
+                Glide.with(MainActivity.this)
+                        .load(uri)
+                        .error(R.drawable.ic_avatar)
+                        .into(imgAvatar);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+            }
+        });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == MY_REQUEST_CODE && resultCode == RESULT_OK) {
-            // Gọi phương thức showUserInformation() để cập nhật thông tin người dùng
             showUserInformation();
         }
     }
